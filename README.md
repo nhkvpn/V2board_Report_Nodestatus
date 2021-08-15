@@ -1,4 +1,4 @@
-# V2board_Report_Node_Status
+# V2board节点情况上报程序
 仅支持[V2Board](https://github/v2board/v2board) <br />
 还没搞完，可能会出现bug <br />
 有bug提issues，看见会修的 <br />

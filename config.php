@@ -5,5 +5,5 @@ $chat_id="聊天id";
 $token="从BotFather哪里获取的机器人token";
 $admin_username="admin@admin.com";
 $admin_password="123456";
-$show_copyright=true;
+$show_poweredby=true; //这个是显示版权
 ?>

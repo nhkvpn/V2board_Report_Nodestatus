@@ -18,6 +18,7 @@ function send($data) {
     $return_content = json_decode($return_content,true);
     return $return_content;
 }
+include "config.php";
 while(true){
 exec("curl https://".$hostname."/api/v1/passport/auth/login -X POST -d 'email=".$admin_username."&password=".$admin_password."' -c logined.cookie",$a);
 exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);

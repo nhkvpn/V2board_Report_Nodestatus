@@ -1,0 +1,9 @@
+<?php
+$name="网站名";
+$hostname="你的网站域名，不带https://，末尾不要/,示例：baidu.com";
+$chat_id="聊天id";
+$token="从BotFather哪里获取的机器人token";
+$admin_username="admin@admin.com";
+$admin_password="123456";
+$show_copyright=true;
+?>

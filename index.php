@@ -20,6 +20,10 @@ function send($data) {
 }
 include "config.php";
 while(true){
+	sleep(10);
+	$dat = date("G");
+	if($dat != date("G"){
+		$dat= date("G");
 exec("curl https://".$hostname."/api/v1/passport/auth/login -X POST -d 'email=".$admin_username."&password=".$admin_password."' -c logined.cookie",$a);
 exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
 $json=json_decode($return[0],true);
@@ -39,7 +43,7 @@ for($i=0;$i<count($json['data'])-1;$i++){
             if($json['data'][$json['data'][$i]['parent_id']]['online']==null){
                 $text.="\n".$json['data'][$i]['name']." 在线人数:0";
             } else {
-                $text.="\n".$json['data'][$i]['name']." 在线人数:".strval($json['data'][$json['data'][$i]['parent_id']]['online']);
+                $text.="\n".$json['data'][$i]['name']." 在线人数:".strval($json['data'][strval($json['data'][$i]['parent_id'])]['online']);
             }
         }
     }
@@ -51,6 +55,5 @@ for($i=0;$i<count($json['data'])-1;$i++){
                 "reply_to_message_id" => $messageid
             );
 	send($data);
-	sleep(3600);
 }
 ?>

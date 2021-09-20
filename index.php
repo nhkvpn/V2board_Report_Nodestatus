@@ -50,5 +50,4 @@ for($i=0;$i<count($json['data'])-1;$i++){
                 "reply_to_message_id" => $messageid
             );
 	send($data);
-}
 ?>

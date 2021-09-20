@@ -1,3 +1,4 @@
+<?php
 function send($data) {
     global $token;
     $data_string = json_encode($data);
@@ -17,3 +18,4 @@ function send($data) {
     $return_content = json_decode($return_content,true);
     return $return_content;
 }
+?>

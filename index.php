@@ -19,11 +19,6 @@ function send($data) {
     return $return_content;
 }
 include "config.php";
-while(true){
-	sleep(10);
-	$dat = date("G");
-	if($dat != date("G"){
-		$dat= date("G");
 exec("curl https://".$hostname."/api/v1/passport/auth/login -X POST -d 'email=".$admin_username."&password=".$admin_password."' -c logined.cookie",$a);
 exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
 $json=json_decode($return[0],true);

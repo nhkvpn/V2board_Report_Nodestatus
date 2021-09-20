@@ -9,7 +9,7 @@ if($show_poweredby){
     $text.="Powered By MengXin";
 }
 for($i=0;$i<count($json)-1;$i++){
-  $text.="\n".$json["data"][$i]["server_name"]." 今天跑了 ".$json["data"][$i]["total"]."流量"
+  $text.="\n".$json["data"][$i]["server_name"]." 今天跑了 ".$json["data"][$i]["total"]."流量";
 }
 include "lib/make.php";
 send($data);

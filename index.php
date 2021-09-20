@@ -1,6 +1,5 @@
 <?php
 include "config.php";
-exec("curl https://".$hostname."/api/v1/passport/auth/login -X POST -d 'email=".$admin_username."&password=".$admin_password."' -c logined.cookie",$a);
 exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
 $json=json_decode($return[0],true);
 $text=$name."节点使用情况\n";

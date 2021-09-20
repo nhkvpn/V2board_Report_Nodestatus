@@ -1,5 +1,7 @@
 <?php
 include "config.php";
+include "lib/sent.php";
+include "lib/login.php";
 exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
 $json=json_decode($return[0],true);
 $text=$name."节点使用情况\n";
@@ -32,11 +34,6 @@ for($i=0;$i<count($json['data'])-1;$i++){
         }
     }
 }
-    $data = array(
-                "chat_id" => $chat_id,
-                "text" => $text,
-                "disable_web_page_preview" => true,
-                "reply_to_message_id" => $messageid
-            );
+include "lib/make.php";
 	send($data);
 ?>

@@ -1,8 +1,8 @@
 <?php
-if($1=="used"){
+if($argv[1]=="used"){
   include "used.php";
 }
-if($1=="traffic"){
+if($argv[1]=="traffic"){
   include "traffic.php";
 }
 ?>

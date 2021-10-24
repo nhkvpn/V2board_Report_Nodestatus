@@ -18,4 +18,13 @@ function send($data) {
     $return_content = json_decode($return_content,true);
     return $return_content;
 }
+function make($chat_id,$text){
+$data = array(
+        "chat_id" => $chat_id,
+        "text" => $text,
+        "disable_web_page_preview" => true,
+        "reply_to_message_id" => $messageid
+            );
+    return $data; 
+}
 ?>

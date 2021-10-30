@@ -2,13 +2,13 @@
 include "config.php";
 include "lib/init.php";
 include "lib/login.php";
-exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
+exec("curl -s https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
 $json=json_decode($return[0],true);
 $text=$name."节点使用情况\n";
 if($show_poweredby){
     $text.="Powered By MengXin";
 }
-for($i=0;$i<count($json['data'])-1;$i++){
+for($i=0;$i<count($json['data']);$i++){
     if($json['data'][$i]['show']!=null){
         if($json['data'][$i]['parent_id']==null){
             if($json['data'][$i]['online']==null){

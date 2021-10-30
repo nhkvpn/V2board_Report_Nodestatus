@@ -1,6 +1,6 @@
 <?php
 include "config.php";
-include "lib/sent.php";
+include "lib/init.php";
 include "lib/login.php";
 exec("curl https://".$hostname."/api/v1/admin/server/manage/getNodes -b logined.cookie",$return);
 $json=json_decode($return[0],true);
@@ -34,6 +34,5 @@ for($i=0;$i<count($json['data'])-1;$i++){
         }
     }
 }
-include "lib/make.php";
-	send($data);
+send(make($chat_id,$text));
 ?>

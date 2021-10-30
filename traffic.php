@@ -1,5 +1,5 @@
 <?php
-include "lib/sent.php";
+include "lib/init.php";
 include "config.php";
 include "lib/login.php";
 exec("curl https://".$hostname."/api/v1/admin/stat/getServerLastRank -b logined.cookie",$return);
@@ -11,6 +11,5 @@ if($show_poweredby){
 for($i=0;$i<count($json)-1;$i++){
   $text.="\n".$json["data"][$i]["server_name"]." 今天跑了 ".$json["data"][$i]["total"]."流量";
 }
-include "lib/make.php";
-send($data);
+send(make($chat_id,$text));
 ?>

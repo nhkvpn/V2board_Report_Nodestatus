@@ -20,8 +20,8 @@ print_usage(){
 		$PWD/$(basename $0) -o
 		$PWD/$(basename $0) -t
 
-		echo "\$(crontab -l)\n59 7-23 * * * $PWD/$(basename $0) -o" | crontab
-		echo "\$(crontab -l)\n59 23 * * * $PWD/$(basename $0) -t" | crontab
+		echo "\$(crontab -l)\n59 7-23 * * * cd $PWD; bash $(basename $0) -o" | crontab
+		echo "\$(crontab -l)\n59 23 * * * cd $PWD; bash $(basename $0) -t" | crontab
 
 EOF
 }
